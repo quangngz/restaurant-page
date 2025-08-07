@@ -1,0 +1,242 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    top: 0;
+}
+
+.logo {
+    background-image: url("images/logo.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;         /* or adjust to your logo size */
+    height: 80px;
+}
+
+#header-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    background-color: black ;         
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/*Home Lading page */
+
+
+/* Slide container */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+#gallery {
+    position: relative;
+    max-width: 80%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#slideContainer {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 25%;
+    padding: 200px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.slide:nth-child(1) {
+    background-image: url("images/food1.webp");
+    background-size: cover;         /* Scale image to cover the container */
+    background-position: center;  
+}
+.slide:nth-child(2) {
+    background-image: url("images/food2.jpg");
+    background-size: cover;         /* Scale image to cover the container */
+    background-position: center;  
+}
+.slide:nth-child(3) {
+    background-image: url("images/food3.webp");
+    background-size: cover;         /* Scale image to cover the container */
+    background-position: center;  
+}
+.slide:nth-child(4) {
+    background-image: url("images/beverages.jpg");
+    background-size: cover;         /* Scale image to cover the container */
+    background-position: center;  
+}
+.slide h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    z-index: 1;
+    position: relative;
+    animation: slideInUp 0.6s ease-out;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+.prev {
+    left: 20px;
+}
+.next {
+    right: 20px;
+}   
+#dotsContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.dot:hover {
+    background: rgba(255,255,255,0.8);
+    transform: scale(1.2);
+}
+.dotActive {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+/* About page*/
+.card-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Reservation page */
+
+.reservation-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reservation-wrapper {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.reservation-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-wrapper label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.reservation-wrapper input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reservation-wrapper button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reservation-wrapper button:hover {
+    background-color: #333;
+}

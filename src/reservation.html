@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="reservation-body">
+        <div class="reservation-wrapper">
+            <h1>Make Your Reservation</h1>
+            <label for="email">Email </label><br>
+            <input type="email"><br>
+            <label for="name">Name </label><br>
+            <input type="text"><br>        
+            <label for="date">Date </label><br>
+            <input type="datetime-local"><br>         
+            <label for="phone">Phone </label><br>
+            <input type="number"><br>
+            <button id="submitButton">Reserve</button>
+        </div>
+    </div>
+    <script>
+        const submitButton = document.getElementById("submitButton"); 
+
+        function handleSubmit() {
+            const email = document.querySelector('input[type="email"]').value;
+            const name = document.querySelector('input[type="text"]').value;
+            const date = document.querySelector('input[type="datetime-local"]').value;
+            const phone = document.querySelector('input[type="number"]').value;
+
+            if (email && name && date && phone) {
+                alert(`Reservation confirmed for ${name} on ${date}.`);
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+        submitButton.addEventListener("click", handleSubmit);
+    </script>
+</body>
+</html>
