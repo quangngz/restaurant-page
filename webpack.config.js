@@ -11,8 +11,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "home.html",
-      template: "./src/home.html",
+      filename: "index.html",
+      template: "./src/index.html",
     }),
     new HtmlWebpackPlugin({
       filename: "about.html",
@@ -42,9 +42,5 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/**/*.html"],
-    open: true,
-    historyApiFallback: {
-      index: '/home.html'
-    },
   }
 };
